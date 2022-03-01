@@ -37,11 +37,6 @@ const routes = [
     name: "Signup",
     component: Signup,
   },
-  // {
-  //   path: "/Contact",
-  //   name: "Contact",
-  //   component: Contact,
-  // },
 ];
 
 const router = createRouter({

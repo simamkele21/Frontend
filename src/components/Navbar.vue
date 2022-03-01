@@ -43,11 +43,11 @@
               </router-link></a
             >
           </li>
-          <!-- <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link" href="#"
               ><router-link :to="{ name: 'Login' }">Login </router-link></a
             >
-          </li> -->
+          </li>
           <!-- <li class="nav-item">
             <a class="nav-link" href="#"
               ><router-link :to="{ name: 'Contact' }">Contact </router-link></a

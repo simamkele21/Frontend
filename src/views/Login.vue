@@ -24,11 +24,8 @@
               />
               <label class="form-label" for="typePasswordX">Password</label>
             </div>
-            <!-- <p class="small mb-5 pb-lg-2">
-              <a class="text-white-50" href="#!">Forgot password?</a>
-            </p> -->
             <button class="btn btn-outline-light btn-lg px-5" type="submit">
-              Login
+              <router-link :to="{ name: 'Profile' }">Login </router-link>
             </button>
           </div>
           <div>
@@ -57,13 +54,13 @@
 <script>
 export default {
   mounted() {
-    fetch("https://complete-rest-api.herokuapp.com/api/")
+    fetch("https://complete-rest-api.herokuapp.com/api/user")
       .then((res) => res.json())
-      .then((data) => {
-        this.Testimonials = data;
-        console.log(Testimonials);
+      .then((json) => {
+        this.user = data;
+        console.log(user);
       })
-      .catch((err) => console.log(err.message));
+      .catch((err) => console.log(err));
   },
 };
 </script>

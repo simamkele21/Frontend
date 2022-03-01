@@ -1,26 +1,5 @@
 <template>
   <!-- <Navbar /> -->
-  <!-- <div class="cart">
-    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-      <img
-        src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
-        class="img-fluid"
-      />
-      <a href="#!">
-        <div
-          class="mask"
-          style="background-color: rgba(251, 251, 251, 0.15)"
-        ></div>
-      </a>
-    </div>
-    <div class="cart-body">
-      <h5 class="cart-title">Card title</h5>
-      <p class="cart-text">description</p>
-      <p>Price</p>
-      <a href="#!" class="btn btn-primary">Remove</a>
-      <a href="#!" class="btn btn-primary">Add item</a>
-    </div>
-  </div> -->
   <div class="cart">
     <img
       src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp"
@@ -58,10 +37,24 @@
 <script>
 // import Navbar from "@/components/Navbar";
 
-// export default {
-//   name: "app",
-//   components: {
-//     Navbar,
-//   },
-// };
+export default {
+  name: "app",
+  // components: {
+  //   Navbar,
+  // },
+  data() {
+    return {
+      products: null,
+    };
+  },
+  mounted() {
+    fetch("https://complete-rest-api.herokuapp.com/api/cart")
+      .then((res) => res.json())
+      .then((json) => {
+        console.log(product);
+        this.product = json;
+      })
+      .catch((err) => console.log(err));
+  },
+};
 </script>
